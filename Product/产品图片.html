@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Title</title>
+  <script src=../jquery-3.4.1.js></script>
+  <link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css">
+  <script src="../bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+  <style>
+    div.imgAndInfo {
+      margin-top: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    div.imgAndInfo .bigImg {
+      position: relative;
+      display: table;
+      table-layout: fixed;
+      z-index: 1;
+      width: 420px;
+      height: 420px;
+      margin: 20px auto 0;
+    }
+
+    div.imgAndInfo .bigImg a {
+      width: 418px;
+      height: 418px;
+      border: 1px solid #F2F2F2;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      position: relative;
+    }
+
+    div.imgInimgAndInfo {
+      width: 400px;
+      float: left;
+
+    }
+
+    div.imgAndInfo .zoomIcon {
+      font-style: normal;
+      font-weight: 400;
+      height: 30px;
+      line-height: 30px;
+      width: 30px;
+      z-index: 2;
+      position: absolute;
+      background-color: #fff;
+      opacity: .6;
+      color: #333;
+      font-size: 18px;
+      right: 0;
+      top: 390px;
+    }
+
+    div.imgAndInfo .PlayVideo {
+      position: absolute;
+      font-size: 36px;
+      top: 370px;
+      left: 10px;
+      font-style: normal;
+      cursor: pointer;
+      z-index: 1000;
+
+    }
+
+    div.imgAndInfo a img {
+      vertical-align: middle;
+      width: 314px;
+      height: 418px;
+    }
+
+    div.imgAndInfo div.smallImageDiv {
+      width: 400px;
+      float: left;
+      margin: 20px auto;
+    }
+
+    div.imgAndInfo img.smallImage {
+      width: 60px;
+      height: 60px;
+      border: 2px solid white;
+      margin-left: 16px;
+    }
+
+    div.imgAndInfo img.smallImage:hover {
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+<div class="imgAndInfo">
+  <div class="imgInimgAndInfo">
+    <div class="bigImg">
+      <a href="#">
+        <span class="zoomIcon glyphicon glyphicon-search"></span>
+        <span>
+          <img id="bigImg" src="http://how2j.cn/tmall/img/productSingle/8619.jpg">
+        </span>
+      </a>
+      <span class="PlayVideo glyphicon glyphicon-play-circle"></span>
+
+    </div>
+    <div class="smallImageDiv">
+      <img width="56px" class="smallImage" src="http://how2j.cn/tmall/img/productSingle/8620.jpg">
+      <img width="56px" class="smallImage" src="http://how2j.cn/tmall/img/productSingle/8619.jpg">
+      <img width="56px" class="smallImage" src="http://how2j.cn/tmall/img/productSingle/8618.jpg">
+      <img width="56px" class="smallImage" src="http://how2j.cn/tmall/img/productSingle/8617.jpg">
+      <img width="56px" class="smallImage" src="http://how2j.cn/tmall/img/productSingle/8616.jpg">
+    </div>
+    <div class="img4load hidden" ></div>
+  </div>
+  <div style="clear:both"></div>
+</div>
+<script>
+  $(function () {
+    //监听小图片的mouseenter事件，获取小图片的src属性,把大图片的src修改为该图片
+    $("img.smallImage").mouseenter(function () {
+      var bigImageURL = $(this).attr("src");
+      $("img#bigImg").attr("src", bigImageURL);
+    });
+
+    $("img#bigImg").load(
+      function () {
+        $("img.smallImage").each(function () {
+          var bigImageURL = $(this).attr("src");
+          img = new Image();
+          img.src = bigImageURL;
+
+          img.onload = function () {
+            console.log(bigImageURL);
+            $("div.img4load").append($(img));
+          };
+        });
+      }
+    );
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+div.categoryWrap {
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: 37px;
+}
+
+div.categoryDiv {
+    margin: 0 auto;
+    width: 1230px;
+    position: relative;
+    display: block;
+}
+
+div.categoryMenu {
+    width: 200px;
+    height: 510px;
+    background-color: rgba(0, 0, 0, .55);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 11;
+}
+
+div.categoryMenu a {
+    line-height: 31.8px;
+    color: #fff;
+    font-size: 14px;
+}
+
+div.eachCategory a:hover {
+    text-decoration: none;
+    color: #C60A0A;
+}
+
+div.productsAsideCategorys {
+    width: 800px;
+    height: 510px;
+    background-color: white;
+    margin-left: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+div.productsAsideCategorys div.row {
+    margin: 20px 80px 0px 80px;
+}
+
+div.productsAsideCategorys div.row div.seperator {
+    margin-top: 20px;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    border-bottom-color: #e7e7e7;
+}
+
+div.productsAsideCategorys a {
+    color: #000;
+    font-size: 14px;
+    margin: 8px;
+}
+
+div.productsAsideCategorys a:hover {
+    color: #C40000;
+    text-decoration: none;
+}
+
+div.eachCategory {
+    line-height: 31.8px;
+    height: 31.8px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+div.eachCategory span {
+    margin-right: 10px;
+}
+
+div.eachCategory:hover {
+    background-color: white;
+    color: #C60A0A;
+}
+
+div.eachCategory:hover a {
+    background-color: white;
+    color: #C60A0A;
+}

@@ -1,0 +1,252 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+div.boughtDiv {
+    max-width: 1070px;
+    margin: 10px auto 50px;
+}
+
+div.orderType {
+    margin-top: 22px;
+    margin-bottom: 22px;
+    position: relative;
+}
+
+div.orderType div {
+    width: 109px;
+    border-bottom: 2px solid #E8E8E8;
+    border-right: 1px solid #E8E8E8;
+    float: left;
+    padding: 0px 20px;
+}
+
+div.orderType a {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+div.orderType a:hover {
+    color: #C40000;
+    text-decoration: none;
+}
+
+div.orderType div.selectedOrderType {
+    border-bottom: 2px solid #C40000;
+}
+
+div.orderType div.selectedOrderType a {
+    color: #C40000;
+}
+
+div.orderTypeLastOne {
+    overflow: hidden;
+    float: none !important;
+    border-bottom: 2px solid #E8E8E8;
+    height: 35px;
+}
+
+a.noRightborder {
+    border-right-width: 0px !important;
+}
+
+table.orderListTitleTable {
+    margin: 10px 0;
+    height: 40px;
+    border: 1px solid #E8E8E8;
+    width: 100%;
+    background-color: #F5F5F5;
+    text-align: center;
+    font-size: 12px;
+}
+
+table.orderListTitleTable td {
+    padding: 5px 0px;
+}
+
+.orderListItem {
+    position: relative;
+}
+
+.orderListContainer {
+    margin: 10px 0;
+    border: 1px solid #ececec;
+}
+
+.orderListContainer:hover {
+    border: 1px solid #BFBFBF;
+}
+
+table.orderListItemTable {
+    /*border: 2px solid #ECECEC;*/
+    width: 100%;
+    /*margin: 20px 0px;*/
+    font-size: 12px;
+    table-layout: fixed;
+}
+
+.orderItemProductInfoPartTR a {
+    color: #3c3c3c;
+}
+
+.orderItemProductInfoPartTD:nth-child(-n+7):nth-child(n+2) {
+    text-align: center;
+}
+
+table.orderListItemTable .orderItemProductInfoPartTR td {
+    padding: 10px 0;
+}
+
+table.orderListItemTable .orderListItemFirstTR td {
+    padding: 10px 20px;
+}
+
+tr.orderListItemFirstTR b {
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+tr.orderListItemFirstTR {
+    background-color: #F1F1F1;
+}
+
+div.orderItemWangWangGif {
+    display: inline-block;
+    width: 67px;
+    height: 22px;
+    background-image: url(http://how2j.cn/tmall/img/site/wangwang.gif);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-attachment: scroll;
+    background-position: -0px -0px;
+    position: relative;
+    top: 0px;
+    left: 2px;
+}
+
+td.orderItemDeleteTD {
+    text-align: right;
+}
+
+span.orderListItemDelete {
+    display: inline-block;
+    margin: 0px 10px;
+    color: #999999;
+    font-size: 16px;
+}
+
+div.orderListItemProductImg {
+    float: left;
+    margin-left: 20px;
+}
+
+div.orderListItemProductLinkOutDiv {
+    margin-left: 110px;
+    position: relative;
+    height: 80px;
+}
+
+div.orderListItemProductLinkInnerDiv {
+    position: absolute;
+    bottom: 0px;
+}
+
+div.orderListItemProductOriginalPrice {
+    color: #999999;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+div.orderListItemProductPrice {
+    color: #3C3C3C;
+    font-size: 14px;
+}
+
+td.orderListItemNumberTD {
+    text-align: center;
+}
+
+td.orderItemOrderInfoPartTD {
+    border: solid 1px #ECECEC;
+}
+
+span.orderListItemNumber {
+    color: #3C3C3C;
+}
+
+td.orderListItemProductRealPriceTD {
+    text-align: center;
+}
+
+div.orderListItemProductRealPrice {
+    color: #3C3C3C;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div.orderListItemPriceWithTransport {
+    color: #6C6C6C;
+    font-size: 12px;
+}
+
+td.orderListItemButtonTD {
+    text-align: center;
+}
+
+button.orderListItemReview {
+    border: 1px solid #DCDCDC;
+    background-color: #fff;
+    border-radius: 3px;
+
+    color: #3C3C3C;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 12px;
+    margin-bottom: 5px;
+}
+
+button.orderListItemReview:hover {
+    border-color: #C40000;
+    color: #C40000;
+}
+
+button.orderListItemConfirm {
+    background-color: #66B6FF;
+    border-radius: 2px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-width: 0px;
+    padding: 6px 12px;
+    margin-bottom: 5px;
+}
+
+button.orderListItemConfirm:hover {
+    background-color: #118ADB;
+}
+
+.glyphitimer {
+    /*vertical-align: middle;*/
+    color: #999AA2;
+    top: 01.6px;
+}
+
+a {
+    color: #999;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #C40000;
+}

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src=../jquery-3.4.1.js></script>
+  <link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css">
+  <script src="../bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+  <style>
+    div.buyPageDiv {
+      margin: 20px auto;
+      max-width: 990px;
+      /*margin-bottom: 60px;*/
+      color: #666;
+    }
+
+    div.addressTip, div.productListTip {
+      color: #333333;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    div.cainiao {
+      border: 2px solid #eee;
+      margin-bottom: 14px;
+    }
+
+    div .cainiaoContainer {
+      border-top: solid 2px #ff0036;
+      display: inline-block;
+      padding: 3px 13px;
+      cursor: pointer;
+      line-height: 20px;
+    }
+
+    span.tipHelp {
+      width: 14px;
+      height: 14px;
+      font-size: 14px;
+      vertical-align: middle;
+      color: #c97;
+    }
+
+    div.cainiaoMain {
+      height: 71px;
+      z-index: 2;
+      cursor: pointer;
+      background: #fff;
+      padding: 15px 5px 5px 14px;
+      line-height: 2;
+    }
+
+    div.cainiaoMain a {
+      text-decoration: none;
+      color: #c97;
+    }
+
+    div.cainiaoMain a:hover {
+      color: #ff0036;
+    }
+
+    .tipFire {
+      color: #ff0036;
+      font-size: 16px;
+      margin-left: 8px;
+      margin-right: 5px;
+    }
+
+    span.tipFree {
+      color: #fff;
+      background-color: #ff0036;
+      border-radius: 2px;
+      margin: 0 8px;
+      padding: 0 2px 1px;
+    }
+
+    table.productListTable {
+      width: 100%;
+      border-collapse: separate;
+      font-size: 12px;
+      border-bottom: 1px dotted #80b2ff;
+    }
+
+    table.productListTable th {
+      color: #6C6C6C;;
+      font-family: 宋体;
+      font-weight: normal;
+      font-size: 12px;
+      text-align: center;
+      padding-bottom: 5px;
+    }
+
+    table.productListTable tr.rowborder td {
+      background-color: #b2d1ff;
+      border-right: 2px solid #fff;
+      height: 3px;
+    }
+
+    td.productListTableFirstColumn {
+      text-align: left !important;
+      padding-bottom: 5px;
+      padding-top: 25px;
+      border-bottom: 1px dotted #80b2ff;
+      height: 22px;
+    }
+
+    td.productListTableFirstColumn img {
+      width: 16px;
+      height: 16px;
+      vertical-align: text-bottom;
+      margin-right: 6px;
+      position: relative;
+      top: 1px;
+    }
+
+    img.tmallbuy {
+      width: 15px;
+    }
+
+    a.marketLink {
+      color: black;
+      font-size: 12px;
+      font-family: 宋体;
+      font-weight: normal;
+    }
+
+    a.marketLink:hover {
+      color: black;
+      font-size: 12px;
+      text-decoration: underline;
+      font-family: 宋体;
+      font-weight: normal;
+    }
+
+    span.wangwangGif {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-image: url(http://how2j.cn/tmall/img/site/wangwang.gif);
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-attachment: scroll;
+      background-position: -83px -0px;
+      position: relative;
+      top: 8px;
+      left: 2px;
+    }
+
+    tbody.productListTableTbody td {
+      text-align: center;
+    }
+
+    tbody.productListTableTbody tr.orderItemTR {
+      vertical-align: top;
+    }
+
+    tbody.productListTableTbody tr.orderItemTR ~ td {
+      padding: 10px 0 10px 10px;
+      margin-right: 1px;
+    }
+
+    tbody.productListTableTbody td.orderItemFirstTD {
+      text-align: left;
+      width: 255px;
+    }
+
+    tbody.productListTableTbody .orderItemMainImg {
+      display: inline-block;
+      margin: 0 1px 0 0;
+      padding: 0px;
+    }
+
+    tbody.productListTableTbody .orderItemInfo {
+      padding-left: 10px;
+      display: inline-block;
+      margin-right: 1px;
+    }
+
+    tr.orderItemTR td {
+      padding: 10px 0;
+    }
+
+    img.orderItemImg {
+      width: 50px;
+      height: 50px;
+    }
+
+    td.orderItemProductInfo {
+      text-align: left !important;
+      width: 180px;
+    }
+
+    td.orderItemProductInfo img {
+      height: 16px;
+    }
+
+    td.orderItemProductPrice, .orderItemProductNumber {
+      width: 120px;
+    }
+
+    td.orderItemProductReduction {
+      width: 180px;
+    }
+
+    a.orderItemProductLink {
+      color: #666666;
+      display: block;
+      width: 180px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    a.orderItemProductLink:hover {
+      color: #666666;
+      text-decoration: underline;
+    }
+
+    span.orderItemProductPrice, span.orderItemProductNumber {
+      color: #000000;
+    }
+
+    span.leaveMessageText {
+      display: inline-block;
+      margin-right: 10px;
+      float: left;
+    }
+
+    textarea.leaveMessageTextarea {
+      vertical-align: top;
+      width: 330px;
+      resize: none;
+      height: 20px;
+      line-height: 18px;
+      text-indent: 4px;
+      border: 1px solid #ccc;
+      outline: 0;
+      overflow: auto;
+      padding: 0;
+    }
+
+    td.orderItemFirstTD, td.orderItemLastTD {
+      border-bottom: 0px solid black !important;
+    }
+
+    table.inTable {
+      vertical-align: top;
+      width: 100%;
+      height: 100%;
+    }
+
+    table.inTable td {
+      padding: 0 0 20px 0;
+    }
+
+    div.orderItemSumDiv span.beRed {
+      font-size: 16px;
+      padding-right: 10px;
+    }
+
+    div.orderFacility {
+      border-bottom: 1px dotted #ddd;
+      text-align: right;
+      padding: 10px 10px 10px 0;
+      height: 36px;
+    }
+
+    div.orderPayChioce {
+      vertical-align: top;
+      margin-left: 30px;
+      display: inline-block;
+    }
+
+    div.orderPayChioce input {
+      margin-top: 1px;
+      margin-right: 5px;
+      cursor: pointer;
+      vertical-align: middle;
+      line-height: 14px;
+      height: 14px;
+      display: inline-block;
+    }
+
+    div.orderPayChioce span {
+      line-height: 14px;
+      height: 14px;
+      vertical-align: middle;
+    }
+
+    div.orderItemTotalSumDiv {
+      text-align: right;
+      margin-top: 15px;
+      height: 40px;
+    }
+
+    div.orderItemTotalSumWrap {
+      border: 3px solid #fff0e8;
+      min-width: 230px;
+      padding: 10px 10px 10px 20px;
+      outline: 1px solid #ff0036;
+    }
+
+    div.submitOrderDiv {
+      height: 40px;
+      margin: 18px 0px;
+    }
+
+    div.orderItemTotalSumDiv span {
+      color: #999999;
+    }
+
+    span.orderItemTotalSumSpan {
+      color: #C40000 !important;
+      font-size: 22px;
+      font-weight: bold;
+      border-bottom: 1px dotted #F2F6FF;
+    }
+
+    button.submitOrderButton {
+      border: 1px solid #C40000;
+      background-color: #C40000;
+      text-align: center;
+      line-height: 40px;
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      float: right;
+      display: inline-block;
+      width: 180px;
+      height: 40px;
+    }
+
+    .FreightIn {
+      position: relative;
+      background: #36ab67;
+      color: #fff;
+      cursor: pointer;
+      padding: 1px;
+      margin-right: 5px;
+    }
+
+    .widgetTipsBox {
+      /*position: relative;*/
+      /*display: inline-block;*/
+      /*margin-left: 5px;*/
+    }
+
+    .widgetTipsBox img, .orderItemProductReduction img {
+      width: 14px;
+      height: 14px;
+      line-height: 14px;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-left: 0;
+      position: relative;
+    }
+
+    .beRed {
+      color: #CC0000;
+      font-weight: bold;
+    }
+
+    .textAlignL {
+      text-align: left;
+    }
+
+    .textAlignR {
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    body {
+      font-size: 12px;
+      font-family: Arial;
+    }
+  </style>
+</head>
+<body>
+<div class="buyPageDiv">
+  <div class="cainiao">
+    <div class="cainiaoContainer">
+      <span class="cainiaoTit">菜鸟驿站代收服务</span>
+      <span class="tipFree">免费</span>
+      <span class="tipHelp glyphicon glyphicon-question-sign"></span>
+    </div>
+    <div class="cainiaoMain">
+      <div>
+        <span class="glyphicon glyphicon-fire tipFire"></span>
+        <span>收货不便，可以使用</span>
+        <span><a href="#">菜鸟驿站代收服务</a></span>
+      </div>
+    </div>
+  </div>
+  <div class="productList">
+    <div class="productListTip">确认订单信息</div>
+    <table class="productListTable" style="border-bottom: 0">
+      <thead>
+      <tr>
+        <th width="255px">店铺宝贝</th>
+        <th width="180px">商品属性</th>
+        <th width="120px">单价</th>
+        <th width="120px">数量</th>
+        <th width="180px">优惠方式</th>
+        <th>小计</th>
+      </tr>
+      <tr class="rowborder">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </thead>
+    </table>
+    <table class="productListTable">
+      <tbody class="productListTableTbody">
+      <tr>
+        <td class="productListTableFirstColumn" colspan="6">
+          <img src="https://gw.alicdn.com/tfs/TB1CzD7SXXXXXXJaXXXXXXXXXXX-32-32.png" class="tmallbuy">
+          <a href="#nowhere" class="marketLink"> 店铺：天猫店铺</a>
+          <a href="#nowhere" class="wangwanglink"> <span class="wangwangGif"></span> </a>
+        </td>
+      </tr>
+      <tr class="orderItemTR">
+        <td class="orderItemFirstTD">
+          <div class="orderItemMainImg">
+            <img width="20px" src="http://how2j.cn/tmall/img/productSingle_middle/4206.jpg" class="orderItemImg">
+          </div>
+          <div class="orderItemInfo">
+            <a class="orderItemProductLink" href="#nowhere">
+              Philips/飞利浦 HR1897/30破壁微榨原汁机 多功能家用果汁榨汁机
+            </a>
+            <img title="支持信用卡支付" src="http://how2j.cn/tmall/img/site/creditcard.png">
+            <img title="消费者保障服务,承诺7天退货" src="http://how2j.cn/tmall/img/site/7day.png">
+            <img title="消费者保障服务,承诺如实描述" src="http://how2j.cn/tmall/img/site/promise.png">
+          </div>
+        </td>
+        <td class="orderItemProductInfo">
+          <span>颜色分类：两包装</span>
+        </td>
+        <td class="orderItemProductPrice">
+          <span>3,514.05</span>
+        </td>
+        <td class="orderItemProductNumber">
+          <span>2</span>
+        </td>
+        <td class="orderItemProductReduction">
+          省44:优惠活动
+          <img src="http://img.alicdn.com/tps/TB1QFFkMXXXXXcNXFXXXXXXXXXX-32-32.png" alt="">
+        </td>
+        <td>
+          <div class="textAlignR"><span class="orderItemUnitSum beRed"> ￥7,028.10</span></div>
+        </td>
+      </tr>
+      <tr class="orderItemTR">
+        <td colspan="2">
+          <span class="leaveMessageText">给卖家留言：</span>
+          <textarea placeholder="选填,请先和商家协商一致" class="leaveMessageTextarea" name="userMessage"></textarea>
+        </td>
+        <td class="orderItemLastTD" colspan="4">
+          <table class="inTable">
+            <tr>
+              <td width="120px">
+                <div class="textAlignR">运送方式：</div>
+              </td>
+              <td>
+                <div class="textAlignL">
+                  普通配送快递 免邮
+                </div>
+              </td>
+              <td></td>
+              <td class="textAlignR beRed">0.00</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="textAlignR">运费险：</div>
+              </td>
+              <td>
+                <div class="textAlignL">
+                  <input type="checkbox" id="selectFreightIn" checked>
+                  <span class="FreightIn">运费险</span>
+                  <span class="orderItemDeliverySelect">卖家送,确认收货前退货可赔</span>
+                </div>
+              </td>
+              <td width="130px">
+                <div class="widgetTipsBox textAlignL">
+                  <img src="http://img.alicdn.com/tps/TB1QFFkMXXXXXcNXFXXXXXXXXXX-32-32.png" alt="">
+                  <img src="http://img.alicdn.com/tps/TB1zNZ_LVXXXXasapXXXXXXXXXX-32-32.png" alt="">
+                </div>
+              </td>
+              <td class="beRed">0.00</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="orderItemTR">
+        <td colspan="6" style="padding: 0 0 15px 0">
+          <div class="orderItemSumDiv">
+            <span class="pull-right">店铺合计(含运费): <span class="beRed">￥9,152.25</span></span>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <table class="productListTable">
+      <tbody class="productListTableTbody">
+      <tr>
+        <td class="productListTableFirstColumn" colspan="6">
+          <img src="https://gw.alicdn.com/tfs/TB1CzD7SXXXXXXJaXXXXXXXXXXX-32-32.png" class="tmallbuy">
+          <a href="#nowhere" class="marketLink"> 店铺：天猫店铺</a>
+          <a href="#nowhere" class="wangwanglink"> <span class="wangwangGif"></span> </a>
+        </td>
+      </tr>
+      <tr class="orderItemTR">
+        <td class="orderItemFirstTD">
+          <div class="orderItemMainImg">
+            <img width="20px" src="http://how2j.cn/tmall/img/productSingle_middle/3796.jpg" class="orderItemImg">
+          </div>
+          <div class="orderItemInfo">
+            <a class="orderItemProductLink" href="#nowhere">
+              公众智能扫地机器人家用全自动电动清洁地毯擦拖地一体机吸尘器
+            </a>
+            <img title="支持信用卡支付" src="http://how2j.cn/tmall/img/site/creditcard.png">
+            <img title="消费者保障服务,承诺7天退货" src="http://how2j.cn/tmall/img/site/7day.png">
+            <img title="消费者保障服务,承诺如实描述" src="http://how2j.cn/tmall/img/site/promise.png">
+          </div>
+        </td>
+        <td class="orderItemProductInfo">
+          <span>颜色分类：两包装</span>
+        </td>
+        <td class="orderItemProductPrice">
+          <span>2,124.15</span>
+        </td>
+        <td class="orderItemProductNumber">
+          <span>1</span>
+        </td>
+        <td class="orderItemProductReduction">
+          无优惠
+        </td>
+        <td>
+          <div class="textAlignR"><span class="orderItemUnitSum beRed"> ￥2,124.15</span></div>
+        </td>
+      </tr>
+      <tr class="orderItemTR">
+        <td class="" colspan="2">
+          <span class="leaveMessageText">给卖家留言：</span>
+          <textarea placeholder="选填,请先和商家协商一致" class="memoInput leaveMessageTextarea" name="userMessage"></textarea>
+        </td>
+        <td class="orderItemLastTD" colspan="4">
+          <table class="inTable">
+            <tr>
+              <td width="120px">
+                <div class="textAlignR">运送方式：</div>
+              </td>
+              <td>
+                <div class="textAlignL">
+                  普通配送快递 免邮
+                </div>
+              </td>
+              <td></td>
+              <td class="textAlignR beRed">0.00</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="textAlignR">运费险：</div>
+              </td>
+              <td>
+                <div class="textAlignL">
+                  <input type="checkbox" id="selectFreightIn" checked>
+                  <span class="FreightIn">运费险</span>
+                  <span class="orderItemDeliverySelect">卖家送,确认收货前退货可赔</span>
+                </div>
+              </td>
+              <td width="130px">
+                <div class="widgetTipsBox textAlignL">
+                  <img src="http://img.alicdn.com/tps/TB1QFFkMXXXXXcNXFXXXXXXXXXX-32-32.png" alt="">
+                  <img src="http://img.alicdn.com/tps/TB1zNZ_LVXXXXasapXXXXXXXXXX-32-32.png" alt="">
+                </div>
+              </td>
+              <td class="beRed">0.00</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="orderItemTR">
+        <td colspan="6" style="padding: 0 0 15px 0">
+          <div class="orderItemSumDiv">
+            <span class="pull-right">店铺合计(含运费): <span class="beRed">￥2,124.15</span></span>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="orderFacility">
+    <div class="orderPayChioce">
+      <input type="checkbox">
+      <span>找人代付</span>
+    </div>
+    <div class="orderPayChioce">
+      <input type="checkbox" checked>
+      <span>匿名购买</span>
+    </div>
+  </div>
+  <div class="orderItemTotalSumDiv">
+    <div class="pull-right orderItemTotalSumWrap">
+      <span>实付款：</span>
+      <span class="orderItemTotalSumSpan">￥9,152.25</span>
+    </div>
+  </div>
+  <div class="submitOrderDiv">
+    <button class="submitOrderButton" type="button">提交订单</button>
+  </div>
+</div>
+<script>
+  $(function () {
+    $("textarea.leaveMessageTextarea").focus(function () {
+      $(this).css({"height": "57px", "border": "1px solid #ff0036"});
+    }).blur(function () {
+      $(this).css({"height": "20px", "border": "1px solid #ccc"});
+    });
+  })
+</script>
+</body>
+</html>

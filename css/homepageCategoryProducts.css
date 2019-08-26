@@ -1,0 +1,364 @@
+div.homepageCategoryProducts {
+    background-color: #F5F5F5;
+    display: block;
+}
+
+div.homepageMain {
+    width: 1260px;
+    height: auto;
+    display: block;
+    margin: 2px auto;
+}
+
+div.eachHomepageCategoryProducts {
+    margin: 30px auto 0;
+    width: 1230px;
+}
+
+.brandItem {
+    float: left;
+    height: 170px;
+    width: 246px;
+}
+
+.brandItem.bigImg {
+    border: none;
+    height: 169px;
+    width: 490px;
+}
+
+.brandItem img {
+    border: none;
+    height: 169px;
+    width: 100%;
+}
+
+div.exhibition {
+    width: 100%;
+    height: 370px;
+}
+
+div.exhibition .exhibitionBrand {
+    float: left;
+    margin-right: 13px;
+}
+
+div.exhibition .exhibitionBrand .exhibitionTit {
+    position: relative;
+    height: 54px;
+    width: 100%;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    line-height: 54px;
+    margin: 0;
+    font-family: "Microsoft YaHei", SimSun, '\5b8b\4f53', sans-serif;
+    margin-left: 10px;
+}
+
+div.exhibition .exhibitionBrand .exhibitionTit .more {
+    position: absolute;
+    right: 14px;
+    top: 0;
+    width: 62px;
+    height: 54px;
+    padding-right: 14px;
+    line-height: 54px;
+    z-index: 99;
+    background-size: 18px 18px;
+    background-image: url(//img.alicdn.com/tfs/TB1B7RoaMMPMeJjy1XcXXXpppXa-36-36.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    font-size: 16px;
+    color: #666;
+    overflow: hidden;
+    font-weight: 100;
+}
+
+div.exhibition .exhibitionBrand img {
+    width: 100%;
+    height: 316px;
+}
+
+div.brandList {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 327px;
+    position: relative;
+}
+
+li, ol, ul {
+    list-style: none;
+    padding: 0;
+}
+
+.brandList .brandItem {
+    width: 122px;
+    height: 108px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    float: left;
+    position: relative;
+}
+
+.brandList .brandItem .brandImg {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    line-height: 108px;
+    background-color: #fff;
+}
+
+.brandList .brandItem img {
+    width: 82%;
+    height: 50px;
+    vertical-align: middle;
+    border: none;
+}
+
+.brandList .brandItem .mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*color: #fff;*/
+    opacity: 0;
+    font-size: 12px;
+}
+
+.brandList .brandItem .mask:hover {
+    background-color: #000000;
+    opacity: 0.8;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+}
+
+.brandList .brandItem .mask .coupon {
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.brandList .brandItem .mask .coupon span {
+    display: block;
+    padding: 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.brandList .brandItem .mask .enter {
+    text-align: center;
+    height: 32px;
+    color: #fff;
+    line-height: 18px;
+    font-size: 12px;
+}
+.brandList .brandItem .mask .enter span{
+    display: inline-block;
+    width: 63px;
+    height:18px;
+    background-color: #FF0036;
+    border-radius: 9px;
+}
+
+div.product1, div.product2 {
+    width: 100%;
+    height: 618px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+div.product1 {
+    height: 618px;
+}
+
+div.product2 {
+    height: 301px;
+}
+
+div.productsBanner {
+    float: left;
+    position: relative;
+    width: 235px;
+    height: 100%;
+    cursor: pointer;
+    transition: opacity .3s ease-out;
+}
+
+div.productsBanner img {
+    width: 100%;
+    height: 100%;
+
+}
+
+div.productsBanner img:hover {
+    opacity: 0.8;
+}
+
+div.banner-detail {
+    position: absolute;
+    vertical-align: middle;
+    bottom: 20%;
+    width: 218px;
+    height: 64px;
+}
+
+div.banner-detail .left-title-wrap {
+    background: rgba(0, 0, 0, .9);
+    width: 70px;
+    height: 64px;
+    overflow: hidden;
+    color: #FFF;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+div.banner-detail .left-title-wrap .left-title {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 24px;
+    font-size: 18px;
+    width: 36px;
+    overflow: hidden;
+}
+
+div.banner-detail .right-title-wrap {
+    left: 70px;
+    top: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, .6);
+    overflow: hidden;
+    width: 128px;
+    height: 64px;
+    color: #FFF;
+    vertical-align: middle;
+}
+
+div.banner-detail .right-title-wrap .right-title-absolute {
+    margin-top: 8px;
+    margin-left: 14px;
+}
+
+div.banner-detail .right-title-wrap .right-title-absolute .right-title {
+    display: block;
+    line-height: 24px;
+    font-size: 18px;
+}
+
+div.productsColumns {
+    width: 995px;
+    height: 618px;
+    float: left;
+    overflow: hidden;
+}
+
+div.productItem {
+    float: left;
+    text-align: center;
+    display: block;
+    width: 234px;
+    height: 300px;
+    border: 1px solid #fff;
+    padding-top: 20px;
+    background: #ffffff;
+    margin-left: 13px;
+}
+div.productItem:hover {
+    border: 1px solid #FF003A;;
+}
+
+
+div.productItemUP:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+div.productItemUP {
+    margin-bottom: 18px;
+}
+
+div.productItem span.productItemDesc {
+    width: 135px;
+    height: 40px;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    display: block;
+    overflow: hidden;
+    margin: 8px auto;
+}
+
+div.productItem span.productPrice {
+    font-size: 18px;
+    color: #FF003A;
+    display: block;
+    line-height: 18px;
+    margin: 10px auto;
+}
+
+div.productItem img {
+    width: 185px;
+    height: 185px;
+    vertical-align: middle;
+    transition: right .3s;
+}
+
+div.productItem:hover {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+a.productItemDescLink {
+    text-decoration: none;
+}
+
+/*span.categoryTitle {*/
+/*font-size: 16px;*/
+/*margin-left: 30px;*/
+/*color: #646464;*/
+/*font-weight: bold;*/
+/*}*/
+div.left-mark {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+div.left-mark img {
+    vertical-align: middle;
+    width: 214px;
+    height: 25px;
+    border: none;
+}
+
+div.left-mark .color-mark {
+    display: inline-block;
+    background-color: #333;
+    width: 5px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+div.left-mark .categoryTitle {
+    margin-left: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+    font-size: 18px;
+    color: #000;
+}
+
+.splitImg Img {
+    width: 100%;
+    height: auto;
+}
+
+img.endpng {
+    display: block;
+    width: 82px;
+    margin: 0 auto;}

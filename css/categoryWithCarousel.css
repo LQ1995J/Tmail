@@ -1,0 +1,68 @@
+div.categoryWithCarousel {
+    height: 546px;
+    width: 100%;
+    position: relative;
+}
+
+div.categoryWithCarousel div.headbar {
+    background-color: #ffffff;
+    margin: 0 auto 0;
+    width: 1230px;
+}
+
+div.categoryWithCarousel div.head {
+    width: 200px;
+    background-color: #C60A0A;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+}
+
+div.categoryWithCarousel div.rightMenu {
+    display: inline-block;
+}
+
+div.categoryWithCarousel div.rightMenu a {
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+    letter-spacing: normal;
+    text-decoration: none;
+    line-height: 36px;
+}
+div.categoryWithCarousel div.rightMenu a:hover {
+    color: #C60A0A;
+}
+
+div.categoryWithCarousel div.rightMenu span {
+    margin: 0 10px;
+}
+
+div.categoryWithCarousel div.rightMenu img {
+    height: 30px;
+}
+
+div.carousel-of-product {
+
+    height: 510px;
+    width: 1024px;
+    margin: 0px auto;
+}
+
+img.carouselImage {
+    height: 510px !important;
+    width: auto;
+}
+
+div.carouselBackgroundDiv {
+    border-top: 1px solid #C60A0A;
+    width: 100%;
+    height: 511px;
+    background-color: #E8E8E8;
+    position: absolute;
+    top: 36px;
+    z-index: -1;
+}

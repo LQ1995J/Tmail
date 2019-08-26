@@ -1,0 +1,384 @@
+div.categoryPageDiv {
+    width: 1190px;
+    margin: auto;
+    /*margin: 10px auto;*/
+    /*padding: 5px;*/
+    /*position: relative;*/
+    /*z-index: 10;*/
+    /*background: #faf9f9;*/
+    /*color: #806f66;*/
+}
+
+div.categorySortTotalWrap {
+    height: 46px;
+    background: #fff;
+    z-index: 100;
+    padding-bottom: 8px;
+    margin-bottom: 0;
+}
+
+div.categorySortTotal {
+    height: 100%;
+    margin: 0 auto;
+    line-height: 27px;
+    z-index: 10001;
+    border-top: 1px solid #e5e5e5;
+    position: relative;
+}
+
+div.categorySortMain {
+    height: 30px;
+    margin: 3px 180px 0 25px;
+    vertical-align: middle;
+}
+
+div.categorySortMain label {
+    /*float: left;*/
+    position: relative;
+    /*background-position: 0 -154px;*/
+    /*border: none;*/
+    width: 164px;
+    height: 22px;
+    line-height: 21px;
+    color: #666;
+    padding: 0 25px 0 12px;
+    margin: 0 15px 0 7px;
+    top: 6px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+
+div.categorySortMain input {
+    background-color: transparent;
+    border: none;
+    color: #757575;
+    outline: 0;
+    float: left;
+    line-height: 20px;
+    height: 20px;
+}
+
+div.categorySortMain .categorySortBtn {
+    position: absolute;
+    border: none;
+    width: 15px;
+    height: 14px;
+    top: 5px;
+    right: 10px;
+    color: #CCCCCC;
+    /*text-indent: -9999px;*/
+}
+
+div.categorySortTotal p {
+    color: #999;
+    top: 7px;
+    right: 10px;
+    line-height: 22px;
+    height: 19px;
+    overflow: hidden;
+    position: absolute;
+    display: inline-block;
+}
+
+div.categorySortTotal p span {
+    font-weight: 700;
+    margin: 0 5px;
+    position: relative;
+    top: 0;
+}
+
+div.categoryBrandWrap {
+    border-top: 1px solid #E6E2E1;
+    position: relative;
+}
+
+div.categoryBrandWrap .categoryBrandMain {
+    border: 2px solid #D1CCC7;
+    background-color: #F7F5F5;
+    /*margin-top: -1px;*/
+}
+
+.categoryBrandH {
+    display: block;
+    height: 25px;
+    line-height: 16px;
+    overflow: hidden;
+    float: left;
+    padding-top: 9px;
+    width: 10%;
+    color: #B0A59F;
+    /*text-indent: 13px;*/
+    padding-left: 13px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.categoryBrandH span {
+    width: 14.4px;
+}
+
+div.categoryBrandContent {
+    position: relative;
+    float: left;
+    background-color: #FFF;
+    width: 90%;
+    padding-top: 6px;
+    overflow: hidden;
+    /*margin-top: 1px;*/
+}
+
+div.categoryBrandContent a:hover {
+    color: #ff0036;
+}
+
+div.categoryBrandOption {
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 105px;
+    z-index: 1;
+}
+
+div.categoryBrandOption .muti {
+    float: left;
+    background-color: #F2F0EF;
+    border: 1px solid #EFEBE9;
+    color: #806F66;
+    cursor: pointer;
+    line-height: 14px !important;
+    /*line-height: 15px;*/
+    margin: 5px 5px 5px 0;
+    padding-right: 3px;
+    padding-left: 4px;
+    position: relative;
+    /*text-align: right;*/
+    width: 50px;
+
+}
+
+div.categoryBrandOption span {
+    font-size: 8px;
+
+}
+
+div.categoryBrandOption .more {
+    vertical-align: middle;
+    position: relative;
+    /*display: inline-block;*/
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px 0 0;
+    color: #806f66;
+    float: right;
+}
+
+div.categoryBrandOption .more:hover {
+    color: #ff0036;
+}
+
+div.categoryBrandMain ul {
+    position: relative;
+    margin-right: 105px;
+    margin-left: 25px;
+    padding-top: 1px;
+    margin-bottom: 5px;
+    height: 107px;
+    padding-left: 0;
+}
+
+div.categoryBrandMain ul li {
+    border: 1px solid #e1e1e1;
+    width: 106px;
+    text-align: center;
+    height: 54px;
+    line-height: 52px;
+    overflow: hidden;
+    margin: -1px -1px 0 0;
+    float: left;
+}
+
+div.categoryBrandMain ul li a {
+    padding: 0;
+    line-height: 52px;
+    height: 52px;
+    width: 104px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    float: left;
+    position: relative;
+    color: #806F66;
+    display: inline-block;
+}
+
+div.categoryBrandMain ul li a img {
+    display: inline;
+    width: 80px;
+    height: 40px;
+    margin: 6px 12px;
+}
+
+div.categoryClassifyWrap {
+    background-color: #F7F5F5;
+    border-color: #E6E2E1 #E6E2E1 #D1CCC7;
+    border-style: solid solid dotted;
+    border-width: 0 1px 1px;
+}
+
+div.categoryClassifyWrap ul {
+    height: auto;
+    max-height: 58px;
+    margin: 0 50px 0 25px;
+    overflow: hidden;
+    position: relative;
+    padding-left: 0;
+}
+
+div.categoryClassifyWrap ul li {
+    display: block;
+    margin: 0 5px 8px 0;
+    width: 180px;
+    overflow: hidden;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+}
+
+div.categoryClassifyWrap ul li a {
+    position: relative;
+    color: #806F66;
+    display: inline-block;
+    padding: 1px 20px 1px 4px;
+    line-height: 20px;
+    height: 22px;
+    white-space: nowrap;
+    outline: 0;
+    width: 144px;
+}
+
+div.categoryClassifyWrap ul li a b {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    float: left;
+    overflow: hidden;
+    max-width: 120px;
+}
+
+
+div.categorySortBar {
+    background-color: #FAF9F9;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+table.categorySortBarTable {
+    border-collapse: collapse;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+table.categorySortBarTable span.glyphicon {
+    font-size: 10px;
+    line-height: 10px;
+}
+
+table.categorySortBarTable td {
+    height: 24px;
+    font-size: 12px;
+    border: 1px solid #CCCCCC;
+    padding: 0 5px 0 5px;
+}
+
+table.categorySortBarTable td.grayColumn {
+    background-color: #F1EDEC;
+}
+
+table.categorySortBarTable td.grayColumn a {
+    color: #ff0036;
+}
+
+table.categorySortBarTable td a {
+    color: #806F66;
+    text-decoration: none;
+}
+
+table.categorySortBarTable td a:hover {
+    color: #ff0036;
+}
+
+table.categorySortBarTable .sortBarPrice {
+    border-width: 0px;
+    height: 15px;
+    width: 50px;
+}
+
+table.categorySortBarTable .sortBarAddress {
+    width: 113px;
+    height: 15px;
+    border-width: 0px;
+}
+
+table.categorySortBarTable td.priceMiddleColumn {
+    width: 10px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+    color: #CCCCCC;
+}
+
+table.categorySortTable td:hover {
+    background-color: #F1EDEC;
+}
+
+table.categoryMore td {
+    width: 255px;
+    height: 24px;
+}
+
+table.categoryMore input {
+    vertical-align: text-bottom;
+}
+
+table.categoryMore .more {
+    float: right;
+}
+
+.btmFeed{
+    color: #333;
+    padding-left: 20px;
+    position: relative;
+    width: 1190px;
+    margin: 10px auto;
+}
+.btmFeed a{
+    color: #36C;
+}
+.btmFeed a:hover{
+    text-decoration: underline;
+}
+
+/*a {*/
+/*    text-decoration: none;*/
+/*}*/
+div.searchMainS {
+    width: 1230px;
+    position: relative;
+    display: block;
+    margin: 0px auto;
+    /*height: 154px;*/
+    padding: 27px 0;
+    margin-top: 20px;
+    background-color: #f4f4f4;
+}
+div.searchMainS .searchMain {
+    width: 625px;
+    /*padding-top: 38px;*/
+    position: relative;
+    display: block;
+    margin: 0px auto;
+    /*height: 130px;*/
+}
+body {
+    font-size: 12px;
+    font-family: Arial;
+}

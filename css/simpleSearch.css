@@ -1,0 +1,217 @@
+div.simpleSearchWrap {
+    padding: 20px 0 40px;
+    position: relative;
+    /*height: 35px;*/
+    width: 1190px;
+    margin: 0 auto;
+}
+div.mallLogo{
+    float: left;
+    width: 162px;
+    padding-top: 0;
+    line-height: 18px;
+    position: relative;
+    height: 64px;
+}
+div.shopExtra{
+    float: left;
+    position: relative;
+    /*padding: 15px 0 0;*/
+    height: 50px;
+}
+div.shopExtra .slogo{
+    /*background: -174px -30px no-repeat;*/
+    float: left;
+    padding: 0 10px;
+    height: 38px;
+    border-left: 1px solid #f0f0f0;
+    width: auto;
+}
+div.shopExtra .slogo a{
+    height: 22px;
+    line-height: 19px;
+    overflow: hidden;
+    background-color: #fff;
+    font-size: 12px;
+    font-family: "\5b8b\4f53";
+    color: #333;
+    font-weight: 700;
+}
+div.shopExtra .slogoExtra{
+    height: 25px;
+    width: 80px;
+}
+div.shopExtra .flagshipIcon{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2px;
+    height: 20px;
+    line-height: 16px;
+    font-weight: 700;
+    background-color: #f4c985;
+    border: 1px solid #e7ba77;
+    border-radius: 2px;
+    color: #856651;
+    text-align: center;
+    font-size: 3px;
+}
+.slogo .ww{
+    display: inline-block;
+    margin: 2px;
+    width: 20px;
+    height: 22px;
+}
+.slogo .ww img{
+    width: 20px;
+}
+div.shopExtra .shopInfo{
+    position: relative;
+    float: left;
+    width: 132px;
+    height: 38px;
+    font-weight: 400;
+    padding: 0 10px;
+    border-left: 1px dotted #f0f0f0;
+}
+div.shopExtra .shopInfo .shopdsrItem{
+    float: left;
+    color: #999;
+    width: 36px;
+    height: 36px;
+    position: relative;
+}
+div.shopExtra .shopInfo .shopdsrItem .shopdsrItemTit {
+    text-align: center;
+}
+div.shopExtra .shopInfo .shopdsrItemCore{
+    color: #ff0036;
+    padding-left: 5px;
+    height: 18px;
+    width: 36px;
+    position: relative;
+    overflow: hidden;
+}
+div.shopExtra .shopInfo .up{
+    color: #ff0036;
+    width: 11px;
+    position: absolute;
+    background: 0 0;
+    text-decoration: none;
+    height: 9px;
+    top:-1px;
+    right: 2px;
+}
+div.shopExtra .shopInfo .up li{
+    width:100%;
+    height: 100%;
+    font-size: 14px;
+    position: absolute;
+}
+a.slogoTriangle{
+    /*float: left;*/
+    display: block;
+    margin: 0 0 0 14px;
+    width: 6px;
+    height: 38px;
+    /*position: relative;*/
+    cursor: pointer;
+    color: #999;
+}
+a.slogoTriangle li{
+    border-color: #ccc #fff #fff;
+    border-style: solid;
+    border-width: 4px;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+
+
+
+
+
+div.simpleSearchDiv {
+    /*width: 400px;*/
+    /*margin: 10px 10px 10px;*/
+    display: block;
+    position: relative;
+}
+
+div.simpleSearchTmail{
+    display: inline-block;
+    background-color: #C40000;
+    padding: 1px;
+    height: 40px;
+}
+div.simpleSearchDiv input {
+    width: 325px;
+    border: 1px solid transparent;
+    height: 34px;
+    margin: 2px;
+    outline: none;
+}
+
+div.simpleSearchDiv button.searchButton {
+    width: 80px;
+    border: 1px solid transparent;
+    background-color: #C40000;
+    color: white;
+    font-size: 14px;
+    /*  font-weight:bold */;
+}
+div.simpleSearchDiv .searchShop {
+    width: 80px;
+    height: 40px;
+    background-color: #333;;
+    color: white;
+    font-size: 14px;
+    margin-left: 3px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    display: inline-block;
+    /*  font-weight:bold */;
+}
+
+div.searchBelow {
+    margin-top: 3px;
+    margin-left: -20px;
+}
+
+div.searchBelow span {
+    color: #999;
+}
+
+div.searchBelow a {
+    padding: 0px 20px 0px 20px;
+    font-size: 14px;
+}
+
+img.simpleLogo {
+    position: absolute;
+    width: 140px;
+}
+
+body {
+    font-size: 12px;
+    font-family: Arial;
+}
+
+a {
+    color: #999;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #C40000;
+}
+
+.splitLine{
+    width: 100%;
+    height: 1px;
+    background-color: #C8BAAA;
+}

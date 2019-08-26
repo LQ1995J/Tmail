@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src=../jquery-3.4.1.js></script>
+  <link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css">
+  <script src="../bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+  <style>
+    div.buyPageDiv {
+      margin: 20px auto;
+      max-width: 1070px;
+    }
+
+    div.address {
+      margin: 20px 5px;
+      text-align: left;
+    }
+
+    div.addressTip, div.productListTip {
+      color: #333333;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    table.addressTable {
+      margin: 20px 20px;
+      width: 600px;
+      font-size: 12px;
+    }
+
+    /*table.addressTable tr {*/
+    /*margin-bottom: 22px;*/
+    /*}*/
+    table.addressTable td {
+      color: #333333;
+      vertical-align: top;
+      padding-right: 15px;
+      height: 30px;
+      margin-bottom: 22px;
+    }
+
+    /*table.addressTable tr:first-child {*/
+      /*text-align: right;*/
+    /*}*/
+
+    /*table.addressTable tr:last-child {*/
+      /*text-align: left;*/
+    /*}*/
+
+    table.addressTable td.firstColumn {
+      width: 100px;
+      text-align: right;
+    }
+
+    table.addressTable td textarea {
+      margin-bottom: 22px;
+      width: 354px;
+      height: 48px;
+      border: 1px solid #c4c6cf;
+      border-radius: 3px;
+      vertical-align: top;
+      padding: 8px;
+    }
+
+    table.addressTable td input {
+      margin-bottom: 22px;
+      width: 354px;
+      height: 28px;
+      border: 1px solid #c4c6cf;
+      border-radius: 3px;
+      vertical-align: top;
+      padding: 0 8px;
+    }
+
+    span.redStar {
+      color: red;
+      font-size: 12px;
+      margin-right: 4px;
+    }
+  </style>
+</head>
+<body>
+<div class="buyPageDiv">
+  <div class="buyFlow">
+    <img src="http://how2j.cn/tmall/img/site/simpleLogo.png" class="pull-left">
+    <img src="http://how2j.cn/tmall/img/site/buyflow.png" class="pull-right">
+    <div style="clear:both"></div>
+  </div>
+  <div class="address">
+    <div class="addressTip">输入收货地址</div>
+    <div>
+      <table class="addressTable">
+        <tbody>
+        <tr>
+          <td class="firstColumn"><span class="redStar">*</span>地址信息:</td>
+          <td>
+            <input type="text" placeholder="请选择省/市/区/街道" name="post">
+          </td>
+        </tr>
+        <tr>
+          <td class="firstColumn"><span class="redStar">*</span>详细地址:</td>
+          <td>
+            <textarea placeholder="建议您如实填写详细收货地址，例如接到名称，门牌好吗，楼层和房间号等信息" name="address"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td class="firstColumn">邮政编码:</td>
+          <td>
+            <input type="text" placeholder="如果您不清楚邮递区号，请填写000000" name="post">
+          </td>
+        </tr>
+        <tr>
+          <td class="firstColumn"><span class="redStar">*</span>收货人姓名:</td>
+          <td><input type="text" placeholder="长度不超过25个字符" name="receiver"></td>
+        </tr>
+        <tr>
+          <td class="firstColumn"><span class="redStar">*</span>手机号码:</td>
+          <td><input type="text" placeholder="请输入11位手机号码" name="mobile"></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>

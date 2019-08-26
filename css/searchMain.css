@@ -1,0 +1,107 @@
+div.searchMainF {
+    width: 1230px;
+    position: relative;
+    display: block;
+    margin: 0px auto;
+    height: 130px;
+}
+
+
+div.searchMainF .searchMain {
+    width: 625px;
+    padding-top: 38px;
+    position: relative;
+    display: block;
+    margin: 0px auto;
+    /*height: 130px;*/
+}
+
+div.searchDiv {
+    position: relative;
+    /*background-color: #C40000;*/
+    width: 625px;
+    display: block;
+    border-right: none;
+    margin-left: 25px;
+    background-color: #f4f4f4;
+}
+
+.logo {
+    height: 130px;
+    width: 290px;
+    position: absolute;
+    z-index: 100000;
+    margin-top: -2px;
+    margin-left: -40px;
+}
+
+.logo img {
+    width: 240px;
+    height: 130px;
+    border: none;
+    margin: 1px auto;
+    display: block;
+}
+
+div.searchDiv input {
+    font-size: 14px;
+    width: 495px;
+    height: 40px;
+    padding: 5px 3px 5px 5px;
+    border: 2px solid #C40000;
+    outline: none;
+}
+
+div.searchDiv button {
+    position: absolute;
+    width: 132px;
+    right: 0;
+    top: 0;
+    height: 40px;
+    background-color: #C40000;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.hot-query {
+    height: 24px;
+    font-size: 14px;
+    padding: 4px 0 0;
+    overflow: hidden;
+    position: relative;
+    width: 625px;
+    margin: 1px auto;
+    margin-left: 25px;
+}
+
+li, ol, ul {
+    list-style: none;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+}
+
+.hot-query li {
+    display: inline-block;
+    border-left: 1px solid #ccc;
+    line-height: 1.1;
+    padding: 0 12px;
+}
+
+.hot-query li a {
+    color: #999;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hot-query li a:hover {
+    color: #C40000;
+}
+
